@@ -1,0 +1,28 @@
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+
+  & .main-pics {
+    width: 500px;
+    height: 290px;
+    position: relative;
+    object-fit: cover;
+  }
+
+  & .btn-next,
+  .btn-prev {
+    position: absolute;
+  }
+
+  & .btn-prev {
+    top: 120px;
+  }
+
+  & .image-list {
+    & .image-item {
+      width: 80px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+}

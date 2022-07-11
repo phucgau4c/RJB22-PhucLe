@@ -1,0 +1,30 @@
+.wrapper {
+  width: 500px;
+  margin: 100px auto;
+  & .button-list {
+    & .button-item {
+      width: 25%;
+      background-color: #fff;
+      font-size: 13px;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      border: none;
+      color: #949494;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    & .button-item:hover {
+      cursor: pointer;
+      color: #000;
+    }
+  }
+
+  & .content {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
