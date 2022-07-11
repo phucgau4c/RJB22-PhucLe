@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  justify-content: center;
+
+  &-img {
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  &-name {
+    font-size: 12px;
+  }
+
+  &-line {
+    border: 1px solid #e2e2e2;
+    margin: 10px 0;
+  }
+
+  & a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #4493ea;
+  }
+
+  & .card-icons {
+    margin: 10px 0;
+  }
+
+  & .card-icon {
+    color: #f4b22d;
+    margin-right: 5px;
+  }
+}

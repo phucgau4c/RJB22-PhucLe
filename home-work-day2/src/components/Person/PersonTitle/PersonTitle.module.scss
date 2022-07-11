@@ -1,0 +1,23 @@
+.wrapper {
+  & .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeef0;
+  }
+
+  & .col1 {
+    font-weight: 400;
+    font-size: small;
+  }
+
+  & .col2 {
+    font-weight: lighter;
+    font-size: 11px;
+  }
+
+  & .col1,
+  .col2 {
+    color: #696567;
+  }
+}

@@ -1,0 +1,36 @@
+.wrapper {
+  margin: 10px auto;
+  width: 500px;
+}
+
+.container {
+  display: flex;
+  height: 40px;
+  color: #fff;
+  margin-bottom: 15px;
+  width: 500px;
+  border: 1px solid #f6f6f6;
+  background-color: #fafafa;
+
+  & .color1 {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+
+  & .colors {
+    width: 70%;
+    &-child {
+      padding-left: 10px;
+      height: 38px;
+    }
+  }
+
+  & .color1,
+  .colors {
+    line-height: 40px;
+    font-size: small;
+    font-weight: bold;
+  }
+}

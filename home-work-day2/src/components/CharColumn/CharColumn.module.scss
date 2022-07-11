@@ -1,0 +1,15 @@
+.wrap {
+  display: flex;
+  width: 800px;
+  margin: 10px auto;
+  justify-content: space-around;
+  background-color: #e6ecef;
+  padding: 10px;
+  & .block {
+    background-color: #ffffff;
+    height: 200px;
+    width: 170px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,28 @@
+.BU1 {
+  margin: 10px auto;
+  max-width: 350px;
+}
+
+.cloth-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border: 1px solid #000;
+  & h3 {
+    font-weight: lighter;
+    margin-bottom: 15px;
+  }
+
+  & img {
+    height: 150px;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
+
+  & li {
+    margin: 5px 0;
+  }
+}

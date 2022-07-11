@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  max-width: 800px;
+  margin: 10px auto;
+  background-color: #f4f7fc;
+  justify-content: space-around;
+  padding: 20px 0;
+
+  & .card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}

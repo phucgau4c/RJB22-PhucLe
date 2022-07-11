@@ -1,0 +1,33 @@
+.card-vol {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.vol {
+  max-width: 300px;
+
+  &-img {
+    width: 300px;
+  }
+
+  &-title {
+    margin: 10px 0;
+    color: #ab9f75;
+    font-size: 13px;
+  }
+
+  &-content {
+    line-height: 25px;
+    max-width: 250px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  & .date {
+    font-size: 13px;
+    & span {
+      color: #ab9f75;
+    }
+  }
+}

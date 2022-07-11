@@ -1,0 +1,32 @@
+.wrap {
+  width: 500px;
+  margin: 0 auto;
+  & .container {
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    & .icon {
+      color: #fff;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    & .name {
+      width: 70px;
+    }
+
+    & .wrap-line {
+      width: 250px;
+      background-color: #f5f5f5;
+    }
+
+    & .line {
+      height: 10px;
+    }
+  }
+}
