@@ -1,0 +1,18 @@
+.id {
+  width: 50px;
+}
+
+.image {
+  width: 100px;
+  height: 80px;
+  padding: 10px 0;
+  object-fit: contain;
+}
+
+.singer,
+.name {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

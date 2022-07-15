@@ -1,0 +1,41 @@
+.wrapper {
+  width: 1170px;
+  margin: 20px auto;
+  & .button-content {
+    display: flex;
+
+    & .button-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .button-item {
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin: 5px 10px;
+      width: 342px;
+      font-size: 13px;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      border: none;
+    }
+  }
+
+  & .title {
+    margin-top: 5px;
+    & h4 {
+      font-weight: lighter;
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+    }
+  }
+
+  & .content {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    line-height: 24px;
+  }
+}

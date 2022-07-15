@@ -1,0 +1,63 @@
+.disk-wrap {
+  width: 400px;
+  height: 500px;
+  background-color: #fdfdfd;
+  display: flex;
+  padding: 20px 50px;
+  flex-direction: column;
+}
+
+.disk {
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: fill;
+    background-color: #dfe6e9;
+    animation: img-spin infinite 5s linear;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+
+  &-name {
+    margin: 10px 0 5px;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  &-singer {
+    font-size: small;
+    font-weight: lighter;
+    color: #bec0d8;
+    margin-bottom: 20px;
+  }
+
+  &-seek {
+    width: 200px;
+    border-radius: 5px;
+    height: 2px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+    margin-bottom: 20px;
+
+    & .seek-child {
+      height: 2px;
+      background-color: #333;
+    }
+  }
+}
+
+@keyframes img-spin {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(350deg);
+  }
+}
