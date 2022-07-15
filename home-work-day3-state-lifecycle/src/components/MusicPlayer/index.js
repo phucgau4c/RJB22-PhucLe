@@ -19,7 +19,6 @@ const cx = classNames.bind(styles);
 
 function MusicPlayer() {
   const [isSelect, setIsSelect] = useState(0);
-  const [song, setSong] = useState(0);
   const listSongs = [
     {
       id: "M1",
@@ -53,6 +52,7 @@ function MusicPlayer() {
 
   return (
     <div className={cx("wrapperMusic")}>
+      {console.log("MusicPlayer")}
       <div className={cx("listSong")}>
         {listSongs.map((listSong, index) => (
           <div
@@ -67,7 +67,6 @@ function MusicPlayer() {
               key={index}
               onClick={() => {
                 setIsSelect(index);
-                setSong(index);
               }}
             >
               <ListSong
@@ -76,11 +75,16 @@ function MusicPlayer() {
                 select={isSelect}
               ></ListSong>
             </div>
+
             <Like></Like>
           </div>
         ))}
       </div>
-      <Disk song={song} listSongs={listSongs}></Disk>
+      <Disk
+        listSongs={listSongs}
+        setIsSelect={setIsSelect}
+        isSelect={isSelect}
+      ></Disk>
     </div>
   );
 }
