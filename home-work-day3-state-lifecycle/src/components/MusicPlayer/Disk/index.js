@@ -10,7 +10,11 @@ function Disk(props) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [timer, setTimer] = useState(0);
   const audioElement = useRef();
+
+  //lấy độ dài của list bài hát
   const lengthOfListSong = Object.keys(listSongs).length;
+
+  //play hoặc pause bài hát
   useEffect(() => {
     isPlaying ? audioElement.current.play() : audioElement.current.pause();
   }, [isPlaying]);
@@ -23,8 +27,21 @@ function Disk(props) {
     setTimer(percentTime);
   };
 
+  //khi bài hát kết thúc isPlaying = false
+  const onEnded = () => {
+    setIsPlaying(false);
+  };
+
+  //khi bài hát được chuyển sang bài khác thì thời gian sẽ được trả về 0
+
+  const onDurationChange = () => {
+    audioElement.current.currentTime = 0;
+    setIsPlaying(false);
+  };
+
   return (
     <div className={cx("disk-wrap")}>
+      {console.log(`timer: ${timer},  isPlaying: ${isPlaying}`)}
       <div className={cx("disk")}>
         <img
           style={{ animation: `${isPlaying ? "" : "a"}` }}
@@ -39,6 +56,8 @@ function Disk(props) {
           src={listSongs[isSelect].mp3}
           ref={audioElement}
           onTimeUpdate={onPlaying}
+          onEnded={onEnded}
+          onDurationChange={onDurationChange}
         ></audio>
         <div className={cx("disk-seek")}>
           <div
@@ -46,12 +65,11 @@ function Disk(props) {
             style={{
               width: `${timer}%`,
             }}
-          >
-            {console.log("Disk")}
-          </div>
+          ></div>
         </div>
       </div>
       <Player
+        audioElement={audioElement}
         lengthOfListSong={lengthOfListSong}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
